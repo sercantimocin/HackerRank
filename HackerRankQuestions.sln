@@ -51,6 +51,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataStucture", "DataStuctur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeightOfBinaryTree", "HeightOfBinaryTree\HeightOfBinaryTree.csproj", "{E48EBE59-E72A-4389-A6D1-8CE934BFB01B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopView", "TopView\TopView.csproj", "{80D0933B-40EA-42F5-BC9D-D339387C65B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -149,6 +151,10 @@ Global
 		{E48EBE59-E72A-4389-A6D1-8CE934BFB01B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E48EBE59-E72A-4389-A6D1-8CE934BFB01B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E48EBE59-E72A-4389-A6D1-8CE934BFB01B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80D0933B-40EA-42F5-BC9D-D339387C65B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80D0933B-40EA-42F5-BC9D-D339387C65B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80D0933B-40EA-42F5-BC9D-D339387C65B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80D0933B-40EA-42F5-BC9D-D339387C65B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -156,5 +162,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{FC189147-60AF-4AB4-A4A5-B4BFF03B537E} = {C54AD75F-5A03-4DD4-96F9-3C7F804D00E5}
 		{E48EBE59-E72A-4389-A6D1-8CE934BFB01B} = {C54AD75F-5A03-4DD4-96F9-3C7F804D00E5}
+		{80D0933B-40EA-42F5-BC9D-D339387C65B5} = {C54AD75F-5A03-4DD4-96F9-3C7F804D00E5}
 	EndGlobalSection
 EndGlobal
