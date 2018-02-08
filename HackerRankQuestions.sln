@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameOfStones", "GameOfStones\GameOfStones.csproj", "{9B9C262D-7682-44EE-B8F2-B4A4D23C1105}"
 EndProject
@@ -52,6 +52,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopView", "DataStructure\TopView\TopView.csproj", "{EB663513-53DE-484E-90FF-12286241B642}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrePostInOrderTraversal", "DataStructure\PrePostInOrderTraversal\PrePostInOrderTraversal.csproj", "{FC189147-60AF-4AB4-A4A5-B4BFF03B537E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearchTreeInsertion", "DataStructure\BinarySearchTreeInsertion\BinarySearchTreeInsertion.csproj", "{8D021C14-4071-49FF-B8E0-D0F67F39AE20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonDataStructure", "DataStructure\CommonDataStructure\CommonDataStructure.csproj", "{CD1AA505-8209-4483-AAC3-A7881865B657}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -155,6 +159,14 @@ Global
 		{FC189147-60AF-4AB4-A4A5-B4BFF03B537E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC189147-60AF-4AB4-A4A5-B4BFF03B537E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC189147-60AF-4AB4-A4A5-B4BFF03B537E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D021C14-4071-49FF-B8E0-D0F67F39AE20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D021C14-4071-49FF-B8E0-D0F67F39AE20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D021C14-4071-49FF-B8E0-D0F67F39AE20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D021C14-4071-49FF-B8E0-D0F67F39AE20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD1AA505-8209-4483-AAC3-A7881865B657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD1AA505-8209-4483-AAC3-A7881865B657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD1AA505-8209-4483-AAC3-A7881865B657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD1AA505-8209-4483-AAC3-A7881865B657}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -163,5 +175,7 @@ Global
 		{E48EBE59-E72A-4389-A6D1-8CE934BFB01B} = {C54AD75F-5A03-4DD4-96F9-3C7F804D00E5}
 		{EB663513-53DE-484E-90FF-12286241B642} = {C54AD75F-5A03-4DD4-96F9-3C7F804D00E5}
 		{FC189147-60AF-4AB4-A4A5-B4BFF03B537E} = {C54AD75F-5A03-4DD4-96F9-3C7F804D00E5}
+		{8D021C14-4071-49FF-B8E0-D0F67F39AE20} = {C54AD75F-5A03-4DD4-96F9-3C7F804D00E5}
+		{CD1AA505-8209-4483-AAC3-A7881865B657} = {C54AD75F-5A03-4DD4-96F9-3C7F804D00E5}
 	EndGlobalSection
 EndGlobal
