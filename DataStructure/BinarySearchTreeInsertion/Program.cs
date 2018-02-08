@@ -29,7 +29,15 @@ namespace BinarySearchTreeInsertion
         {
             Node previous = root;
             Node current = root;
-            bool isRight;
+
+            Node newNode = new Node();
+            newNode.data = value;
+
+            if (root == null)
+            {
+                root = newNode;
+                return root;
+            }
 
             do
             {
@@ -38,24 +46,16 @@ namespace BinarySearchTreeInsertion
                 if (current.data < value)
                 {
                     current = current.right;
-                    isRight = true;
+                    if (current == null)
+                    {
+                        previous.right = newNode;
+                    }
+
                 }
                 else
                 {
                     current = current.left;
-                    isRight = false;
-                }
-
-                if (current == null)
-                {
-                    var newNode = new Node();
-                    newNode.data = value;
-
-                    if (isRight)
-                    {
-                        previous.right = newNode;
-                    }
-                    else
+                    if (current == null)
                     {
                         previous.left = newNode;
                     }
