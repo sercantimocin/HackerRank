@@ -1,6 +1,7 @@
 ﻿namespace CommonDataStructure
 {
     using System;
+    using System.Linq;
 
     public class Node
     {
@@ -56,7 +57,7 @@
             }
         }
 
-        public static Node Move(this Node node,int value)
+        public static Node Move(this Node node, int value)
         {
             if (node.data < value)
             {
@@ -64,6 +65,45 @@
             }
 
             return node.left;
+        }
+
+        public static Node AvlTree(this string[] sarr)
+        {
+            int[] arr = sarr.Select(int.Parse).ToArray();
+
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                for (int j = i + 1; j < arr.Length; j++)
+                {
+                    if (arr[i] > arr[j])
+                    {
+                        int temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+
+            return arr.ToBinarySearchTree(0, arr.Length - 1);
+        }
+
+
+        private static Node ToBinarySearchTree(this int[] arr, int start, int end)
+        {
+            if (start > end)
+            {
+                return null;
+            }
+
+            int midIndex = (start + end) / 2;
+
+            Node newNode = new Node();
+            newNode.data = arr[midIndex];
+
+            newNode.left = ToBinarySearchTree(arr, start, midIndex - 1);
+            newNode.right = ToBinarySearchTree(arr, midIndex + 1, end);
+
+            return newNode;
         }
     }
 }

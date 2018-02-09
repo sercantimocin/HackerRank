@@ -16,6 +16,7 @@
             node = "1 2 5 3 6 4".Split(' ').ConvertToTree();
             node = "5 3 10 2 4 7 12 8".Split(' ').ConvertToTree();
             node = "1 2 3 4".Split(' ').ConvertToTree();
+            node = "5 4 7 3 9 8".Split(' ').ConvertToTree();
 
             LevelOrder(node);
 
@@ -61,3 +62,43 @@
         }
     }
 }
+
+
+//void levelOrder(Node root)
+//{
+
+//    Queue<Integer> queue = new ArrayDeque<Integer>();
+
+//    if (root != null)
+//    {
+//        queue.add(root.data);
+//    }
+
+//    LevelOrderTraversal(root, queue);
+
+//    while (queue.size() > 0)
+//    {
+//        System.out.print(queue.remove() + " ");
+//    }
+//}
+
+//void LevelOrderTraversal(Node root, Queue<Integer> queue)
+//{
+//    if (root != null)
+//    {
+//        Node leftNode = root.left;
+//        if (leftNode != null)
+//        {
+//            queue.add(leftNode.data);
+//        }
+
+//        Node rightNode = root.right;
+//        if (rightNode != null)
+//        {
+//            queue.add(rightNode.data);
+//        }
+
+//        LevelOrderTraversal(leftNode, queue);
+//        LevelOrderTraversal(rightNode, queue);
+//    }
+//}
