@@ -47,8 +47,8 @@ namespace MinimumAbsoluteDifferenceInArray
 
             for (int i = 0; i < 6; i++)
             {
-
-                if (array[i][0] == array[i][1] == array[i][2] == array[i][3]){
+                if (array[i][0] == array[i][1] && array[i][2] == array[i][3])
+                {
                     square++;
                 }
                 else if ((array[i][0] == array[i][2]) && (array[i][1] == array[i][3]))
