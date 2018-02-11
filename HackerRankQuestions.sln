@@ -65,6 +65,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsBinarySearchTree", "DataS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HuffmanDecoding", "DataStructure\HuffmanDecoding\HuffmanDecoding.csproj", "{0CDC843F-60C0-414E-8AFF-843319E45786}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeftRotation", "LeftRotation\LeftRotation.csproj", "{6BCE7788-1F18-42D7-8303-4BA5852E1533}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -191,6 +193,10 @@ Global
 		{0CDC843F-60C0-414E-8AFF-843319E45786}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CDC843F-60C0-414E-8AFF-843319E45786}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CDC843F-60C0-414E-8AFF-843319E45786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BCE7788-1F18-42D7-8303-4BA5852E1533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BCE7788-1F18-42D7-8303-4BA5852E1533}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BCE7788-1F18-42D7-8303-4BA5852E1533}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BCE7788-1F18-42D7-8303-4BA5852E1533}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
