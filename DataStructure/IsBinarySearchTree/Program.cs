@@ -31,43 +31,54 @@ namespace IsBinarySearchTree
                 return false;
             }
 
-            List<int> countedRecords = new List<int>();
-            Queue<Node> q = new Queue<Node>();
-            q.Enqueue(root);
+            return isBst(root, int.MinValue, int.MaxValue);
 
-            while (q.Count > 0)
+        }
+
+        static bool isBst(Node root, int min, int max)
+        {
+            if (root == null)
             {
-                Node current = q.Dequeue();
+                return true;
+            }
 
-                if (countedRecords.Contains(current.data))
-                {
-                    return false;
-                }
-                countedRecords.Add(current.data);
-
-                Node left = current.left;
-                Node right = current.right;
-
-                if (left != null)
-                {
-                    if (current.data <= left.data)
-                    {
-                        return false;
-                    }
-                    q.Enqueue(left);
-                }
-
-                if (right != null)
-                {
-                    if (current.data >= right.data)
-                    {
-                        return false;
-                    }
-                    q.Enqueue(right);
-                }
-            };
-
-            return true;
+            if (root.data >= min && root.data <= max)
+            {
+                return isBst(root.left, min, root.data - 1) && isBst(root.right, root.data + 1, max);
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
+
+
+//boolean checkBST(Node root)
+//{
+//    if (root == null)
+//    {
+//        return false;
+//    }
+
+//    return isBst(root, Integer.MIN_VALUE,
+//                       Integer.MAX_VALUE);
+//}
+
+//boolean isBst(Node root, int min, int max)
+//{
+//    if (root == null)
+//    {
+//        return true;
+//    }
+
+//    if (root.data >= min && root.data <= max)
+//    {
+//        return isBst(root.left, min, root.data - 1) && isBst(root.right, root.data + 1, max);
+//    }
+//    else
+//    {
+//        return false;
+//    }
+//}
