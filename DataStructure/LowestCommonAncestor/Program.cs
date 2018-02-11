@@ -14,8 +14,11 @@ namespace LowestCommonAncestor
     {
         static void Main(string[] args)
         {
-            Node root = "4 2 7 1 3 6".Split(' ').ConvertToTree();
-            LowestCommon(root, 1, 7);
+            Node root = null;
+            root = "4 2 7 1 3 6".Split(' ').ConvertToTree();
+            //root = "20 10 30 39 50 29 60 38".Split(' ').ConvertToTree();
+            LowestCommon(root, 1, 3);
+            //LowestCommon(root, 50, 10);
 
             Console.ReadKey();
         }
@@ -27,70 +30,44 @@ namespace LowestCommonAncestor
                 return;
             }
 
-            int firstDataDistance = GetDistance(root, v1);
-            int secondDataDistance = GetDistance(root, v2);
+            List<Node> arry1 = GetDistance(root, v1);
+            List<Node> arry2 = GetDistance(root, v2);
 
-            int totalDistance = 0;
+            Node match = null;
 
-            if ((firstDataDistance < 0 && secondDataDistance < 0) || (firstDataDistance > 0 && secondDataDistance > 0))
+            foreach (Node a1 in arry1)
             {
-                totalDistance = Math.Abs(firstDataDistance - secondDataDistance);
-            }
-            else
-            {
-                totalDistance = Math.Abs(firstDataDistance) + Math.Abs(secondDataDistance);
-            }
-
-            decimal averageDistance = (decimal)totalDistance / 2;
-            int roundedDistance = (int)Math.Ceiling(averageDistance);
-
-            Node r = null;
-
-            if (Math.Abs(firstDataDistance) >= roundedDistance)
-            {
-                r = GetNode(root, v1, roundedDistance);
-            }
-            else
-            {
-                r = GetNode(root, v2, roundedDistance);
+                foreach (Node a2 in arry2)
+                {
+                    if (a1.data == a2.data)
+                    {
+                        match = a1;
+                    }
+                }
             }
 
-            Console.WriteLine(r.data);
+            Console.WriteLine(match.data);
         }
 
 
-        static int GetDistance(Node root, int value)
+        static List<Node> GetDistance(Node root, int value)
         {
-            int result = 0;
+            List<Node> results = new List<Node>();
 
             if (root != null)
             {
-                if (root.data == value)
-                {
-                    return 0;
-                }
+                int index = 0;
+                Node current = root;
 
-                if (root.data > value)
+                while (true)
                 {
-                    result = GetDistance(root.left, value) - 1;
-                }
-                else
-                {
-                    result = GetDistance(root.right, value) + 1;
-                }
-            }
+                    results.Add(current);
 
-            return result;
-        }
+                    if (current.data == value)
+                    {
+                        break;
+                    }
 
-        static Node GetNode(Node root, int value, int distance)
-        {
-            Node current = root;
-
-            if (root != null)
-            {
-                do
-                {
                     if (current.data > value)
                     {
                         current = current.left;
@@ -99,20 +76,10 @@ namespace LowestCommonAncestor
                     {
                         current = current.right;
                     }
-
-                    if (current.data == value)
-                    {
-                        current = root;
-                        break;
-                    }
-
-                    distance = distance - 1;
-
                 }
-                while (distance > 0);
             }
 
-            return current;
+            return results;
         }
     }
 }
@@ -122,72 +89,45 @@ namespace LowestCommonAncestor
 //{
 //    if (root == null)
 //    {
-//        return root;
+//        return null;
 //    }
 
-//    int firstDataDistance = GetDistance(root, v1);
-//    int secondDataDistance = GetDistance(root, v2);
+//    List<Node> arry1 = GetDistance(root, v1);
+//    List<Node> arry2 = GetDistance(root, v2);
 
-//    int totalDistance = 0;
+//    Node match = null;
 
-//    if ((firstDataDistance < 0 && secondDataDistance < 0) || (firstDataDistance > 0 && secondDataDistance > 0))
+//    for (Node a1 : arry1)
 //    {
-//        totalDistance = Math.abs(firstDataDistance - secondDataDistance);
-//    }
-//    else
-//    {
-//        totalDistance = Math.abs(firstDataDistance) + Math.abs(secondDataDistance);
-//    }
-
-//    double averageDistance = (double)totalDistance / 2;
-//    int roundedDistance = (int)Math.ceil(averageDistance);
-
-//    Node r = null;
-
-//    if (Math.abs(firstDataDistance) >= roundedDistance)
-//    {
-//        r = GetNode(root, v1, roundedDistance);
-//    }
-//    else
-//    {
-//        r = GetNode(root, v2, roundedDistance);
+//        for (Node a2 : arry2)
+//        {
+//            if (a1.data == a2.data)
+//            {
+//                match = a1;
+//            }
+//        }
 //    }
 
-//    return r;
+//    return match;
 //}
 
-//static int GetDistance(Node root, int value)
+//static List<Node> GetDistance(Node root, int value)
 //{
-//    int result = 0;
+//    List<Node> results = new ArrayList<Node>();
 
 //    if (root != null)
 //    {
-//        if (root.data == value)
-//        {
-//            return 0;
-//        }
+//        Node current = root;
 
-//        if (root.data > value)
+//        while (true)
 //        {
-//            result = GetDistance(root.left, value) - 1;
-//        }
-//        else
-//        {
-//            result = GetDistance(root.right, value) + 1;
-//        }
-//    }
+//            results.add(current);
 
-//    return result;
-//}
+//            if (current.data == value)
+//            {
+//                break;
+//            }
 
-//static Node GetNode(Node root, int value, int distance)
-//{
-//    Node current = root;
-
-//    if (root != null)
-//    {
-//        do
-//        {
 //            if (current.data > value)
 //            {
 //                current = current.left;
@@ -196,18 +136,8 @@ namespace LowestCommonAncestor
 //            {
 //                current = current.right;
 //            }
-
-//            if (current.data == value)
-//            {
-//                current = root;
-//                break;
-//            }
-
-//            distance = distance - 1;
-
 //        }
-//        while (distance > 0);
 //    }
 
-//    return current;
+//    return results;
 //}
