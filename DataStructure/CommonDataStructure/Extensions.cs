@@ -10,6 +10,14 @@
         public Node right;
     }
 
+    public class HNode
+    {
+        public int frequency;
+        public char data;
+        public Node left;
+        public Node right;
+    }
+
     public static class Extensions
     {
         public static Node ConvertToTree(this string[] array)

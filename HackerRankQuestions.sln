@@ -63,6 +63,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LowestCommonAncestor", "Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsBinarySearchTree", "DataStructure\IsBinarySearchTree\IsBinarySearchTree.csproj", "{4E227389-6AF3-4176-83CE-DA37D7214A22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HuffmanDecoding", "DataStructure\HuffmanDecoding\HuffmanDecoding.csproj", "{0CDC843F-60C0-414E-8AFF-843319E45786}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -185,6 +187,10 @@ Global
 		{4E227389-6AF3-4176-83CE-DA37D7214A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E227389-6AF3-4176-83CE-DA37D7214A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E227389-6AF3-4176-83CE-DA37D7214A22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CDC843F-60C0-414E-8AFF-843319E45786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CDC843F-60C0-414E-8AFF-843319E45786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CDC843F-60C0-414E-8AFF-843319E45786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CDC843F-60C0-414E-8AFF-843319E45786}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -198,5 +204,6 @@ Global
 		{1B2D2044-F6FC-4793-96D3-7D19857DA09C} = {C54AD75F-5A03-4DD4-96F9-3C7F804D00E5}
 		{FCF42E97-B5CC-44F1-B4F8-3496495C607B} = {C54AD75F-5A03-4DD4-96F9-3C7F804D00E5}
 		{4E227389-6AF3-4176-83CE-DA37D7214A22} = {C54AD75F-5A03-4DD4-96F9-3C7F804D00E5}
+		{0CDC843F-60C0-414E-8AFF-843319E45786} = {C54AD75F-5A03-4DD4-96F9-3C7F804D00E5}
 	EndGlobalSection
 EndGlobal
