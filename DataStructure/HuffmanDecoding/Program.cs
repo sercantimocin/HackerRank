@@ -40,3 +40,28 @@ namespace HuffmanDecoding
         }
     }
 }
+
+//void decode(String S, Node root)
+//{
+//    Node current = root;
+//    char[] encodedChars = S.toCharArray();
+
+//    for (char encodedChar : encodedChars)
+//    {
+//        if (encodedChar == '0')
+//        {
+//            current = current.left;
+//        }
+//        else
+//        {
+//            current = current.right;
+//        }
+
+//        if (current.data != '\0')
+//        {
+//            System.out.print(current.data);
+//            current = root;
+//        }
+//    }
+
+//}
