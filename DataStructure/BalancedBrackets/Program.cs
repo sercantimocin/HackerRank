@@ -28,22 +28,55 @@ namespace BalancedBrackets
                 {
                     char popedChar = s.Pop();
 
-                    if ((popedChar == '(' && c == ')')|| (popedChar == '[' && c == ']') || (popedChar == '{' && c == '}'))
+                    if ((popedChar == '(' && c != ')') || (popedChar == '[' && c != ']') || (popedChar == '{' && c != '}'))
                     {
-                        return "No";
+                        return "NO";
                     }
                 }
             }
 
-            return "Yes";
+            return "YES";
         }
     }
 }
 
 
-//static String isBalanced(String s)
+//static String isBalanced(String text)
 //{
-//    Stack<Character> s = new Stack<>();
 
-//    for (Character c: )
+//    if (text == null && text.trim().isEmpty())
+//    {
+//        return "NO";
+//    }
+
+//    Stack<Character> s = new Stack();
+
+//    for (Character c : text.toCharArray())
+//    {
+//        if (c == '(' || c == '[' || c == '{')
+//        {
+//            s.push(c);
+//        }
+//        else if (c == ')' || c == ']' || c == '}')
+//        {
+//            if (s.size() == 0)
+//            {
+//                return "NO";
+//            }
+
+//            char popedChar = s.pop();
+
+//            if ((popedChar == '(' && c != ')') || (popedChar == '[' && c != ']') || (popedChar == '{' && c != '}'))
+//            {
+//                return "NO";
+//            }
+//        }
+//    }
+
+//    if (s.size() == 0)
+//    {
+//        return "YES";
+//    }
+
+//    return "NO";
 //}
