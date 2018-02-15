@@ -13,7 +13,7 @@ namespace _2sComplement
         static void Main(string[] args)
         {
 
-            int val = -2;
+            int val = -1;
 
             Console.WriteLine(ConvertBinaryPresantation(val));
             Console.ReadKey();
@@ -34,7 +34,7 @@ namespace _2sComplement
             else
             {
                 int quotient = (int)(newVal / 2);
-                int remainder = (int)newVal % 2;
+                int remainder = (int)(newVal % 2);
 
                 return ConvertBinaryPresantation(quotient) + remainder;
             }
@@ -60,9 +60,8 @@ namespace _2sComplement
 
 //        for (int i = 0; i < m; i++)
 //        {
-//            String[] str = in.nextLine().split(" ");
-//            inputs[i][0] = Integer.parseInt(str[0]);
-//            inputs[i][1] = Integer.parseInt(str[1]);
+//            inputs[i][0] = in.nextInt();
+//            inputs[i][1] = in.nextInt();
 //        }
 
 //        for (int i = 0; i < m; i++)
@@ -94,7 +93,7 @@ namespace _2sComplement
 //        else
 //        {
 //            int quotient = (int)(newVal / 2);
-//            int remainder = (int)newVal % 2;
+//            int remainder = (int)(newVal % 2);
 
 //            return ConvertBinaryPresantation(quotient) + remainder;
 //        }
