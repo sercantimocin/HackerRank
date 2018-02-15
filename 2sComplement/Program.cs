@@ -86,16 +86,6 @@ namespace _2sComplement
 //            newVal = (long)(Math.pow(2, 32) - Math.abs(value));
 //        }
 
-//        if (newVal < 2)
-//        {
-//            return (int)newVal;
-//        }
-//        else
-//        {
-//            int quotient = (int)(newVal / 2);
-//            int remainder = (int)(newVal % 2);
-
-//            return ConvertBinaryPresantation(quotient) + remainder;
-//        }
+//        return Long.bitCount(newVal);
 //    }
 //}
