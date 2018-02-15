@@ -8,14 +8,14 @@ namespace _2sComplement
 {
     class Program
     {
-        private static readonly int MAX_VALUE_OF_32_BIT = (int)Math.Pow(2, 33);
+        private static readonly long MAX_VALUE_OF_32_BIT = (long)Math.Pow(2, 32);
 
         static void Main(string[] args)
         {
 
             int val = -2;
 
-            int complimented = Get2Compliment(val);
+            long complimented = Get2Compliment(val);
 
             List<int> list = new List<int>();
             ConvertBinaryPresantation(complimented, list);
@@ -24,29 +24,30 @@ namespace _2sComplement
             Console.ReadKey();
         }
 
-        static int Get2Compliment(int value)
+        static long Get2Compliment(long value)
         {
-            if (value > 0)
+            if (value < 0)
             {
-                return MAX_VALUE_OF_32_BIT - value;
+                return (MAX_VALUE_OF_32_BIT - Math.Abs(value));
+
             }
             else
             {
-                return MAX_VALUE_OF_32_BIT - Math.Abs(value);
+                return value;
             }
         }
 
-        static void ConvertBinaryPresantation(int value, List<int> result)
+        static void ConvertBinaryPresantation(long value, List<int> result)
         {
             if (value < 2)
             {
-                result.Add(value);
+                result.Add((int)value);
             }
             else
             {
-                int remainder;
-                int quotient = Math.DivRem(value, 2, out remainder);
-                result.Add(remainder);
+                long remainder;
+                long quotient = Math.DivRem(value, 2, out remainder);
+                result.Add((int)remainder);
 
                 ConvertBinaryPresantation(quotient, result);
             }
