@@ -12,14 +12,22 @@ namespace _2sComplement
 
         static void Main(string[] args)
         {
-
             int val = -1;
 
-            Console.WriteLine(ConvertBinaryPresantation(val));
+            //Console.WriteLine(ConvertBinaryPresantation(val));
+            Console.WriteLine(CountBinaryBits_HammingWeight(val));
             Console.ReadKey();
         }
 
-        static int ConvertBinaryPresantation(int value)
+        static int CountBinaryBits_HammingWeight(int i)
+        {
+            i = i - ((i >> 1) & 0x55555555);
+            i = (i & 0x33333333) + ((i >> 2) & 0x33333333);
+            return (((i + (i >> 4)) & 0x0F0F0F0F) * 0x01010101) >> 24;
+        }
+
+
+        static int CountBinaryBitsMy(int value)
         {
             long newVal = value;
             if (value < 0)
@@ -36,7 +44,7 @@ namespace _2sComplement
                 int quotient = (int)(newVal / 2);
                 int remainder = (int)(newVal % 2);
 
-                return ConvertBinaryPresantation(quotient) + remainder;
+                return CountBinaryBitsMy(quotient) + remainder;
             }
         }
     }
@@ -53,6 +61,7 @@ namespace _2sComplement
 
 //    public static void main(String[] args)
 //    {
+
 //        Scanner in = new Scanner(System.in);
 //        int m = in.nextInt();
 
@@ -70,7 +79,7 @@ namespace _2sComplement
 
 //            for (int j = inputs[i][0]; j <= inputs[i][1]; j++)
 //            {
-//                countOfOnes += ConvertBinaryPresantation(j);
+//                countOfOnes += CountBinaryBits_HammingWeight(j);
 //            }
 
 //            System.out.println(countOfOnes);
@@ -78,14 +87,10 @@ namespace _2sComplement
 
 //    }
 
-//    static int ConvertBinaryPresantation(int value)
+//    static int CountBinaryBits_HammingWeight(int i)
 //    {
-//        long newVal = value;
-//        if (value < 0)
-//        {
-//            newVal = (long)(Math.pow(2, 32) - Math.abs(value));
-//        }
-
-//        return Long.bitCount(newVal);
+//        i = i - ((i >> 1) & 0x55555555);
+//        i = (i & 0x33333333) + ((i >> 2) & 0x33333333);
+//        return (((i + (i >> 4)) & 0x0F0F0F0F) * 0x01010101) >> 24;
 //    }
 //}
